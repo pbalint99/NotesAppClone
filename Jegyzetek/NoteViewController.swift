@@ -10,35 +10,70 @@ import UIKit
 import RealmSwift
 
 class NoteViewController: UIViewController {
-
+    
     @IBOutlet weak var textView: UITextView!
+    
     let realm = try! Realm()
-    let thisItem = Item()
+    var thisItem : Item?
+    var isNewItem : Bool = true
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        textView.text = thisItem.content
+        textView.text = thisItem?.content
         textView.isEditable = true
+        textView.becomeFirstResponder()
         
     }
     
-    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
-        super.dismiss(animated: true) {
-            self.saveItem()
-        }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        
+//        if textView.text == "" {
+//            do {
+//                try realm.write {
+//                    realm.delete(<#T##object: Object##Object#>)
+//                }
+//            } catch {print("ERROR 7")}
+//        }
+        saveItem()
+        
     }
 
     func saveItem() {
         
-        do {
-            try realm.write {
-                thisItem.content = textView.text
+        if isNewItem == true {
+            
+            do {
+                try realm.write {
+                    let newItem = Item()
+                    realm.add(newItem)
+                    newItem.content = textView.text
+                    newItem.title = String(textView.text.prefix(40))
+                    
+                }
+
+            } catch  {
+                print("ERROR1: error saving text to realm")
             }
-        } catch  {
-            print("ERROR1: error saving text to realm")
+        }
+            
+        else
+            
+        {
+            
+            do {
+                try realm.write {
+                    thisItem?.content = textView.text
+                    thisItem?.title = String(textView.text.prefix(40))
+                }
+            } catch { print ("ERROR5")}
+            
         }
     }
-
+    
+    func titleGiver(item: Item) {
+        
+    }
+    
 }
-
