@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F6D7AE82122EDC800075533 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6D7AE72122EDC800075533 /* Item.swift */; };
 		6F7426402122D8690065498C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F74263F2122D8690065498C /* AppDelegate.swift */; };
 		6F7426422122D8690065498C /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7426412122D8690065498C /* NoteViewController.swift */; };
 		6F7426452122D8690065498C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F7426432122D8690065498C /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		196B917833A99391EC666B18 /* Pods-Jegyzetek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jegyzetek.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jegyzetek/Pods-Jegyzetek.debug.xcconfig"; sourceTree = "<group>"; };
 		38CCBEDC58D0DC2980126A91 /* Pods-Jegyzetek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jegyzetek.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jegyzetek/Pods-Jegyzetek.release.xcconfig"; sourceTree = "<group>"; };
+		6F6D7AE72122EDC800075533 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		6F74263C2122D8690065498C /* Jegyzetek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jegyzetek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F74263F2122D8690065498C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F7426412122D8690065498C /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				6F7426512122DBE90065498C /* ListTableViewController.swift */,
 				6F7426412122D8690065498C /* NoteViewController.swift */,
 				6F7426432122D8690065498C /* Main.storyboard */,
+				6F6D7AE72122EDC800075533 /* Item.swift */,
 				6F7426532122DFC40065498C /* Supporting files */,
 			);
 			path = Jegyzetek;
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F7426522122DBE90065498C /* ListTableViewController.swift in Sources */,
+				6F6D7AE82122EDC800075533 /* Item.swift in Sources */,
 				6F7426422122D8690065498C /* NoteViewController.swift in Sources */,
 				6F7426402122D8690065498C /* AppDelegate.swift in Sources */,
 			);
