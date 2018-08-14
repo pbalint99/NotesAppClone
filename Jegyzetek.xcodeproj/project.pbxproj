@@ -72,15 +72,23 @@
 		6F74263E2122D8690065498C /* Jegyzetek */ = {
 			isa = PBXGroup;
 			children = (
-				6F74263F2122D8690065498C /* AppDelegate.swift */,
-				6F7426412122D8690065498C /* NoteViewController.swift */,
 				6F7426512122DBE90065498C /* ListTableViewController.swift */,
+				6F7426412122D8690065498C /* NoteViewController.swift */,
 				6F7426432122D8690065498C /* Main.storyboard */,
-				6F7426482122D8690065498C /* LaunchScreen.storyboard */,
-				6F7426462122D8690065498C /* Assets.xcassets */,
-				6F74264B2122D8690065498C /* Info.plist */,
+				6F7426532122DFC40065498C /* Supporting files */,
 			);
 			path = Jegyzetek;
+			sourceTree = "<group>";
+		};
+		6F7426532122DFC40065498C /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				6F74263F2122D8690065498C /* AppDelegate.swift */,
+				6F7426482122D8690065498C /* LaunchScreen.storyboard */,
+				6F74264B2122D8690065498C /* Info.plist */,
+				6F7426462122D8690065498C /* Assets.xcassets */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 		F88C7BD1BBF015C15D5B47BA /* Frameworks */ = {
@@ -358,7 +366,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 65767WVW2J;
-				INFOPLIST_FILE = Jegyzetek/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Jegyzetek/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -377,7 +385,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 65767WVW2J;
-				INFOPLIST_FILE = Jegyzetek/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Jegyzetek/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
