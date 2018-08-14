@@ -8,12 +8,14 @@
 
 import UIKit
 import ChameleonFramework
+import RealmSwift
 
 
 
 class ListTableViewController: UITableViewController {
     
     var itemArray = [Item]()
+    let realm = try! Realm()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,6 +91,12 @@ class ListTableViewController: UITableViewController {
     @IBAction func addButton(_ sender: UIBarButtonItem) {
         
         performSegue(withIdentifier: "goToNote", sender: self)
+        
+        do {
+            try realm.add(newItem)
+        } catch  {
+            print("ERROR2: Error adding new item")
+        }
         
     }
     

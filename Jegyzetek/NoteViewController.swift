@@ -7,19 +7,38 @@
 //
 
 import UIKit
+import RealmSwift
 
 class NoteViewController: UIViewController {
 
+    @IBOutlet weak var textView: UITextView!
+    let realm = try! Realm()
+    let thisItem = Item()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        textView.text = thisItem.content
+        textView.isEditable = true
+        
+    }
+    
+    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        super.dismiss(animated: true) {
+            self.saveItem()
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func saveItem() {
+        
+        do {
+            try realm.write {
+                thisItem.content = textView.text
+            }
+        } catch  {
+            print("ERROR1: error saving text to realm")
+        }
     }
-
 
 }
 
