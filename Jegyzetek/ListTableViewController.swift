@@ -21,6 +21,13 @@ class ListTableViewController: UITableViewController, SwipeTableViewCellDelegate
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
+        let emptyNotes = realm.objects(Item.self).filter("title == ''")
+        do {
+            try realm.write {
+                realm.delete(emptyNotes)
+            }
+        } catch { print("ERROR8") }
         loadItems()
     }
     
